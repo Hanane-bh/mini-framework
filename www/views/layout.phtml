@@ -1,0 +1,38 @@
+<!Doctype html>
+
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <title>My Website</title>
+        <link rel="stylesheet" href="<?=$router->getWwwPath()."/css/normalize.css"?>">
+        <link rel="stylesheet" href= "<?=$router->getWwwPath()."/css/style.css"?>">
+    </head>
+
+
+    <body>
+        <header>
+                    <!-- Create your header -->
+        </header>
+
+        <aside>
+            <?php foreach ($flashbag->getAllMessages() as $message): ?>
+            <p class='flashbag_msg'>
+                - <?=$message?> -
+            </p>
+            <?php endforeach?>
+        </aside>
+
+
+        <main>
+           
+            <?php include $templatePath?>
+
+        </main>
+
+
+        <footer>
+                    <!-- Create your footer -->
+        </footer>
+
+    </body>
+</html>
